@@ -1,6 +1,6 @@
 [Unit]
-Description=Python Proxy Mod By geovpn
-Documentation=https://t.me/geovpn
+Description=Python TLS Websocket Mod HideSSH
+Documentation=https://hidessh.com
 After=network.target nss-lookup.target
 
 [Service]
