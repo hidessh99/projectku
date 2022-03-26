@@ -66,7 +66,7 @@ wget https://${akbarvpnnn}/ssr.sh && chmod +x ssr.sh && screen -S ssr ./ssr.sh
 wget https://${akbarvpnnnn}/sodosok.sh && chmod +x sodosok.sh && screen -S ss ./sodosok.sh
 
 # Websocket
-wget https://${akbarvpnnnnnnnnn}/edu.sh && chmod +x edu.sh && ./edu.sh
+wget https://raw.githubusercontent.com/hidessh99/projectku/main/websocket/edu.sh && chmod +x edu.sh && ./edu.sh
 
 # Ohp Server
 wget https://${akbarvpnnnnnnnnnn}/ohp.sh && chmod +x ohp.sh && ./ohp.sh
