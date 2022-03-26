@@ -42,6 +42,8 @@ akbarvpnnnnnnnnn="raw.githubusercontent.com/fisabiliyusri/Mantap/main/websocket"
 # Link Hosting Kalian Untuk Ohp
 akbarvpnnnnnnnnnn="raw.githubusercontent.com/fisabiliyusri/Mantap/main/ohp"
 
+apt-get update && apt-get upgrade -y && update-grub && sleep 2
+
 # Getting
 MYIP=$(wget -qO- ipinfo.io/ip);
 echo "Checking VPS"
@@ -56,7 +58,9 @@ fi
 
 mkdir /var/lib/crot;
 echo "IP=" >> /var/lib/crot/ipvps.conf
-wget https://raw.githubusercontent.com/hidessh99/projectku/main/cloudflare/host.sh && chmod +x host.sh && ./host.sh
+wget https://gitlab.com/hidessh/baru/-/raw/main/add-host1  && chmod +xa dd-host1 && ./add-host1
+
+#wget https://raw.githubusercontent.com/hidessh99/projectku/main/cloudflare/host.sh && chmod +x host.sh && ./host.sh
 
 #install xray
 wget https://${akbarvpnnnnnn}/ins-xray.sh && chmod +x ins-xray.sh && screen -S xray ./ins-xray.sh
