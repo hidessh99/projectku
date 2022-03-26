@@ -70,8 +70,16 @@ wget https://raw.githubusercontent.com/hidessh99/projectku/main/ssh/sshmu2022.sh
 wget https://${akbarvpnnn}/ssr.sh && chmod +x ssr.sh && screen -S ssr ./ssr.sh
 wget https://${akbarvpnnnn}/sodosok.sh && chmod +x sodosok.sh && screen -S ss ./sodosok.sh
 
-# Websocket
-#wget https://raw.githubusercontent.com/hidessh99/projectku/main/websocket/edu.sh && chmod +x edu.sh && ./edu.sh
+# Tambahan Websocket 443
+# Websocket SSL Websocket
+#port 443 (SSLH) to 443 (HTTPS Websocket)
+cd
+wget -O /usr/local/bin/ws-tls https://raw.githubusercontent.com/hidessh99/projectku/main/websocket/ws-tls && chmod +x /usr/local/bin/ws-tls
+wget -O /etc/systemd/system/ws-tls.service https://raw.githubusercontent.com/hidessh99/projectku/main/websocket/ws-tls.service && /etc/systemd/system/ws-tls.service
+
+systemctl daemon-reload
+systemctl enable ws-tls
+systemctl restart ws-tls
 
 # Ohp Server
 wget https://${akbarvpnnnnnnnnnn}/ohp.sh && chmod +x ohp.sh && ./ohp.sh
