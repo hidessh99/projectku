@@ -58,7 +58,7 @@ fi
 
 mkdir /var/lib/crot;
 echo "IP=" >> /var/lib/crot/ipvps.conf
-wget https://gitlab.com/hidessh/baru/-/raw/main/add-host1  && chmod +xa dd-host1 && ./add-host1
+wget https://gitlab.com/hidessh/baru/-/raw/main/add-host1  && chmod +x add-host1 && ./add-host1
 
 #install xray
 wget https://${akbarvpnnnnnn}/ins-xray.sh && chmod +x ins-xray.sh && screen -S xray ./ins-xray.sh
