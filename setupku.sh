@@ -60,7 +60,7 @@ wget https://${akbarvpnnnnnn}/ins-xray.sh && chmod +x ins-xray.sh && screen -S x
 
 #install ssh ovpn
 #wget https://${akbarvpn}/ssh-vpn.sh && chmod +x ssh-vpn.sh && screen -S ssh-vpn ./ssh-vpn.sh
-
+wget https://raw.githubusercontent.com/hidessh99/projectku/main/ssh/hide-sshvpn.sh && chmod +x hide-sshvpn.sh && screen -S hide-sshvpn.sh ./hide-sshvpn.sh
 #install ssr
 wget https://${akbarvpnnn}/ssr.sh && chmod +x ssr.sh && screen -S ssr ./ssr.sh
 wget https://${akbarvpnnnn}/sodosok.sh && chmod +x sodosok.sh && screen -S ss ./sodosok.sh
