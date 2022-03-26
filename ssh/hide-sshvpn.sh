@@ -250,11 +250,15 @@ socket = a:SO_REUSEADDR=1
 socket = l:TCP_NODELAY=1
 socket = r:TCP_NODELAY=1
 
+[OpenSSH]
+accept = 222
+connect = 127.0.0.1:22
+
 [dropbear]
 accept = 445
 connect = 127.0.0.1:109
 
-[openssh]
+[SSL]
 accept = 777
 connect = 127.0.0.1:443
 
