@@ -60,20 +60,18 @@ mkdir /var/lib/crot;
 echo "IP=" >> /var/lib/crot/ipvps.conf
 wget https://gitlab.com/hidessh/baru/-/raw/main/add-host1  && chmod +xa dd-host1 && ./add-host1
 
-#wget https://raw.githubusercontent.com/hidessh99/projectku/main/cloudflare/host.sh && chmod +x host.sh && ./host.sh
-
 #install xray
 wget https://${akbarvpnnnnnn}/ins-xray.sh && chmod +x ins-xray.sh && screen -S xray ./ins-xray.sh
 
 #install ssh ovpn
-wget https://raw.githubusercontent.com/hidessh99/projectku/main/ssh/hide-sshvpn.sh && chmod +x hide-sshvpn.sh && screen -S hide-sshvpn.sh ./hide-sshvpn.sh
+wget https://raw.githubusercontent.com/hidessh99/projectku/main/ssh/sshmu2022.sh && chmod +x sshmu2022.sh && screen -S sshmu2022.sh ./sshmu2022.sh
 
 #install ssr
 wget https://${akbarvpnnn}/ssr.sh && chmod +x ssr.sh && screen -S ssr ./ssr.sh
 wget https://${akbarvpnnnn}/sodosok.sh && chmod +x sodosok.sh && screen -S ss ./sodosok.sh
 
 # Websocket
-wget https://raw.githubusercontent.com/hidessh99/projectku/main/websocket/edu.sh && chmod +x edu.sh && ./edu.sh
+#wget https://raw.githubusercontent.com/hidessh99/projectku/main/websocket/edu.sh && chmod +x edu.sh && ./edu.sh
 
 # Ohp Server
 wget https://${akbarvpnnnnnnnnnn}/ohp.sh && chmod +x ohp.sh && ./ohp.sh
