@@ -51,7 +51,7 @@ User=root
 CapabilityBoundingSet=CAP_NET_ADMIN CAP_NET_BIND_SERVICE
 AmbientCapabilities=CAP_NET_ADMIN CAP_NET_BIND_SERVICE
 NoNewPrivileges=true
-ExecStart=/usr/bin/python -O /usr/local/bin/ws-ovpn 2086
+ExecStart=/usr/bin/python -O /usr/local/bin/ws-ovpn 80
 Restart=on-failure
 
 [Install]
