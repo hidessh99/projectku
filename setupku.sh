@@ -71,6 +71,10 @@ wget https://${akbarvpnnnnnnnnn}/edu.sh && chmod +x edu.sh && ./edu.sh
 # Ohp Server
 wget https://${akbarvpnnnnnnnnnn}/ohp.sh && chmod +x ohp.sh && ./ohp.sh
 
+#tambahan
+wget -O /usr/bin/addtrgo https://raw.githubusercontent.com/hidessh99/projectku/main/Tambahan/addtrgo.sh && chmod +x /usr/bin/addtrgo
+wget -O /usr/bin/addss https://raw.githubusercontent.com/hidessh99/projectku/main/Tambahan/addss.sh && chmod +x /usr/bin/addss
+
 
 # Install Slowdns Server
 # wget https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/Slowdns/install && chmod +x install && bash install
