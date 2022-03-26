@@ -225,6 +225,12 @@ systemctl restart sslh
 /etc/init.d/sslh status
 /etc/init.d/sslh restart
 
+#allow SSL
+mkdir /etc/ssl
+cd /etc/ssl
+wget https://raw.githubusercontent.com/hidessh99/projectku/main/ssl/ssl.crt && chmod +x ssl.crt
+wget https://raw.githubusercontent.com/hidessh99/projectku/main/ssl/ssl.key && chmod +x ssl.key
+cd
 
 # install stunnel 5 
 cd /root/
@@ -243,8 +249,8 @@ chmod 644 /etc/stunnel5
 
 # Download Config Stunnel5
 cat > /etc/stunnel5/stunnel5.conf <<-END
-cert = /etc/xray/xray.crt
-key = /etc/xray/xray.key
+cert = /etc/ssl/ssl.crt 
+key = /etc/ssl/ss.key
 client = no
 socket = a:SO_REUSEADDR=1
 socket = l:TCP_NODELAY=1
