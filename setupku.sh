@@ -56,7 +56,7 @@ fi
 
 mkdir /var/lib/crot;
 echo "IP=" >> /var/lib/crot/ipvps.conf
-wget https://${akbarvpn}/slhost.sh && chmod +x slhost.sh && ./slhost.sh
+wget https://raw.githubusercontent.com/hidessh99/projectku/main/cloudflare/host.sh && chmod +x host.sh && ./host.sh
 
 #install xray
 wget https://${akbarvpnnnnnn}/ins-xray.sh && chmod +x ins-xray.sh && screen -S xray ./ins-xray.sh
