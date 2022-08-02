@@ -53,8 +53,8 @@ cd
 #install client-sldns.service
 cat > /etc/systemd/system/client-sldns.service << END
 [Unit]
-Description=Client SlowDNS By SL
-Documentation=https://nekopoi.care
+Description=Client SlowDNS By HideSSH
+Documentation=https://hidessh.com
 After=network.target nss-lookup.target
 
 [Service]
@@ -73,8 +73,8 @@ cd
 #install server-sldns.service
 cat > /etc/systemd/system/server-sldns.service << END
 [Unit]
-Description=Server SlowDNS By SL
-Documentation=https://nekopoi.care
+Description=Server SlowDNS By HideSSH
+Documentation=https://hidessh.com
 After=network.target nss-lookup.target
 
 [Service]
