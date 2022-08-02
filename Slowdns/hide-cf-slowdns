@@ -21,10 +21,6 @@ CF_ID=admin@hidessh.com
 CF_KEY=e9c10a9d66f7c61b79c2a83fcc45669c32a17
 
 
-#SUB_DOMAIN=onichan-${sub}.hidesvr.xyz
-#NS_DOMAIN=slowdns-${subsl}.hidesvr.xyz
-#echo "IP=""$SUB_DOMAIN" >> /var/lib/crot/subdomain.conf
-
 set -euo pipefail
 IP=$(wget -qO- icanhazip.com);
 echo "Updating DNS for ${SUB_DOMAIN}..."
@@ -77,5 +73,3 @@ RESULT=$(curl -sLX PUT "https://api.cloudflare.com/client/v4/zones/${ZONE}/dns_r
      --data '{"type":"NS","name":"'${NS_DOMAIN}'","content":"'${SUB_DOMAIN}'","ttl":120,"proxied":false}')
 echo "Host : $SUB_DOMAIN"
 echo $SUB_DOMAIN > /root/subdomain
-echo "Host NS : $NS_DOMAIN"
-
