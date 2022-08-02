@@ -6,6 +6,7 @@ cd
 
 #wget https://raw.githubusercontent.com/fisabiliyusri/SLDNS/main/slowdns/slhostdns.sh && chmod +x slhostdns.sh && ./slhostdns.sh
 
+wget https://raw.githubusercontent.com/hidessh99/projectku/main/Slowdns/hide-cf-slowdns && chmod +x hide-cf-slowdns && ./hide-cf-slowdns
 nameserver=$(cat /root/nsdomain)
 apt update -y
 apt install -y python3 python3-dnslib net-tools
