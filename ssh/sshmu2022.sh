@@ -15,6 +15,9 @@ ver=$VERSION_ID
 
 # Link Hosting Kalian Untuk Stunnel5
 akbarvpnnnn="raw.githubusercontent.com/fisabiliyusri/Mantap/main/stunnel5"
+# Link Hosting Kalian
+akbarvpn="raw.githubusercontent.com/fisabiliyusri/Mantap/main/ssh"
+
 
 #detail nama perusahaan
 country=ID
@@ -169,14 +172,22 @@ apt-get remove apache2 -y
 apt-get purge apache2* -y
 
 # install webserver
-apt -y install nginx
-cd
+apt -y install nginx php php-fpm php-cli php-mysql libxml-parser-perl
 rm /etc/nginx/sites-enabled/default
 rm /etc/nginx/sites-available/default
-wget -O /etc/nginx/nginx.conf "https://gitlab.com/hidessh/baru/-/raw/main/nginx.conf"
+curl https://${akbarvpn}/nginx.conf > /etc/nginx/nginx.conf
+curl https://${akbarvpn}/vps.conf > /etc/nginx/conf.d/vps.conf
+sed -i 's/listen = \/var\/run\/php-fpm.sock/listen = 127.0.0.1:9000/g' /etc/php/fpm/pool.d/www.conf
+useradd -m vps;
 mkdir -p /home/vps/public_html
-wget -O /etc/nginx/conf.d/vps.conf "https://gitlab.com/hidessh/baru/-/raw/main/vps.conf"
+
+echo "<?php phpinfo() ?>" > /home/vps/public_html/info.php
+chown -R www-data:www-data /home/vps/public_html
+chmod -R g+rw /home/vps/public_html
+cd /home/vps/public_html
+wget -O /home/vps/public_html/index.html "https://${akbarvpn}/index.html1"
 /etc/init.d/nginx restart
+cd
 
 # install badvpn
 cd
