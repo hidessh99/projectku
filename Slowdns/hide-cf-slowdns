@@ -16,7 +16,7 @@ DOMAIN=hidesvr.xyz
 
 read -rp "Masukkan Subdomain: " -e sub
 SUB_DOMAIN=${sub}.${DOMAIN}
-NS_DOMAIN=slowdns-${SUB_DOMAIN}
+NS_DOMAIN=slowdns-${SUB_DOMAIN}.hidesvr.xyz
 CF_ID=admin@hidessh.com
 CF_KEY=e9c10a9d66f7c61b79c2a83fcc45669c32a17
 
