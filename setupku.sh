@@ -57,16 +57,12 @@ echo "Script Already Installed"
 exit 0
 fi
 
-mkdir /var/lib/crot;
-echo "IP=" >> /var/lib/crot/ipvps.conf
-wget https://gitlab.com/hidessh/baru/-/raw/main/add-host1  && chmod +x add-host1 && ./add-host1
 
 #install ssh ovpn
 wget https://raw.githubusercontent.com/hidessh99/projectku/main/ssh/sshmu2022.sh && chmod +x sshmu2022.sh && screen -S sshmu2022.sh ./sshmu2022.sh
 
 #install ssr
 #wget https://${akbarvpnnn}/ssr.sh && chmod +x ssr.sh && screen -S ssr ./ssr.sh
-
 
 #installer shdowsocks
 wget https://${akbarvpnnnn}/sodosok.sh && chmod +x sodosok.sh && screen -S ss ./sodosok.sh
@@ -89,15 +85,8 @@ wget https://${akbarvpnnnnnnnnnn}/ohp.sh && chmod +x ohp.sh && ./ohp.sh
 #wget -O /usr/bin/addtrgo https://raw.githubusercontent.com/hidessh99/projectku/main/Tambahan/addtrgo.sh && chmod +x /usr/bin/addtrgo
 wget -O /usr/bin/addss https://raw.githubusercontent.com/hidessh99/projectku/main/Tambahan/addss.sh && chmod +x /usr/bin/addss
 
-
 # Install Slowdns Server
-# wget https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/Slowdns/install && chmod +x install && bash install
-# Informasi IP Saya dan Semua Port TCP UDP
-# wget https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/ipsaya.sh && chmod +x ipsaya.sh
-#
-# install xray grpc
-#wget https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/grpc/sl-grpc.sh && chmod +x sl-grpc.sh && screen -S sl-grpc ./sl-grpc.sh
-#
+wget https://raw.githubusercontent.com/hidessh99/projectku/main/Slowdns/hidessh-slowdns && chmod +x hidessh-slowdns && ./hidessh-slowdns
 
 rm -f /root/ssh-vpn.sh
 rm -f /root/sstp.sh
