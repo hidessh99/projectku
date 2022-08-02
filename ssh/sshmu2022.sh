@@ -23,9 +23,9 @@ akbarvpn="raw.githubusercontent.com/fisabiliyusri/Mantap/main/ssh"
 country=ID
 state=Indonesia
 locality=Indonesia
-organization=hidessh.com
-organizationalunit=hidessh.com
-commonname=hidessh.com
+organization=hidessh
+organizationalunit=hidessh
+commonname=hidessh
 email=admin@hidessh.com
 
 # simple password minimal
@@ -218,6 +218,21 @@ echo "/bin/false" >> /etc/shells
 echo "/usr/sbin/nologin" >> /etc/shells
 /etc/init.d/dropbear restart
 
+cd
+#installer certifikast ssl cloudflare
+wget -O /etc/xray/xray.key "https://raw.githubusercontent.com/hidessh99/projectku/main/certiSSL/cloudflare/hidesvr.key"
+wget -O /etc/xray/xray.crt "https://raw.githubusercontent.com/hidessh99/projectku/main/certiSSL/cloudflare/hidesvr.pem"
+chmod +x /etc/xray/xray.key
+chmod +x /etc/xray/xray.crt
+
+#alternatif ssl
+openssl genrsa -out key.pem 2048
+openssl req -new -x509 -key key.pem -out cert.pem -days 1095 \
+-subj "/C=$country/ST=$state/L=$locality/O=$organization/OU=$organizationalunit/CN=$commonname/emailAddress=$email"
+cat key.pem >> /etc/xray/ssl.key
+cat cert.pem >> /etc/xray/ssl.crt
+chmod +x /etc/xray/ssl.key
+chmod +x /etc/xray/ssl.crt
 
 # install stunnel 5 
 cd /root/
