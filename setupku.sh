@@ -1,6 +1,7 @@
 #!/bin/bash
 # Created HideSSH modikasi 
-#SSH,VPN,TrojanGo,Shadwsocks
+#created agustus 2022
+#SSH,VPN,Shadwsocks
 
 if [ "${EUID}" -ne 0 ]; then
 		echo "You need to run this script as root"
@@ -60,14 +61,14 @@ mkdir /var/lib/crot;
 echo "IP=" >> /var/lib/crot/ipvps.conf
 wget https://gitlab.com/hidessh/baru/-/raw/main/add-host1  && chmod +x add-host1 && ./add-host1
 
-#install xray
-wget https://${akbarvpnnnnnn}/ins-xray.sh && chmod +x ins-xray.sh && screen -S xray ./ins-xray.sh
-
 #install ssh ovpn
 wget https://raw.githubusercontent.com/hidessh99/projectku/main/ssh/sshmu2022.sh && chmod +x sshmu2022.sh && screen -S sshmu2022.sh ./sshmu2022.sh
 
 #install ssr
-wget https://${akbarvpnnn}/ssr.sh && chmod +x ssr.sh && screen -S ssr ./ssr.sh
+#wget https://${akbarvpnnn}/ssr.sh && chmod +x ssr.sh && screen -S ssr ./ssr.sh
+
+
+#installer shdowsocks
 wget https://${akbarvpnnnn}/sodosok.sh && chmod +x sodosok.sh && screen -S ss ./sodosok.sh
 
 # Tambahan Websocket 443
@@ -84,8 +85,8 @@ systemctl restart ws-tls
 # Ohp Server
 wget https://${akbarvpnnnnnnnnnn}/ohp.sh && chmod +x ohp.sh && ./ohp.sh
 
-#tambahan
-wget -O /usr/bin/addtrgo https://raw.githubusercontent.com/hidessh99/projectku/main/Tambahan/addtrgo.sh && chmod +x /usr/bin/addtrgo
+#tambahan package shadowsoks and trojan go
+#wget -O /usr/bin/addtrgo https://raw.githubusercontent.com/hidessh99/projectku/main/Tambahan/addtrgo.sh && chmod +x /usr/bin/addtrgo
 wget -O /usr/bin/addss https://raw.githubusercontent.com/hidessh99/projectku/main/Tambahan/addss.sh && chmod +x /usr/bin/addss
 
 
