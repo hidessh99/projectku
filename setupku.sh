@@ -72,7 +72,7 @@ wget https://${akbarvpnnnn}/sodosok.sh && chmod +x sodosok.sh && screen -S ss ./
 #port 443 (SSLH) to 443 (HTTPS Websocket)
 cd
 wget -O /usr/local/bin/ws-tls https://raw.githubusercontent.com/hidessh99/projectku/main/websocket/ws-tls && chmod +x /usr/local/bin/ws-tls
-wget -O /etc/systemd/system/ws-tls.service https://raw.githubusercontent.com/hidessh99/projectku/main/websocket/ws-tls.service && /etc/systemd/system/ws-tls.service
+wget -O /etc/systemd/system/ws-tls.service https://raw.githubusercontent.com/hidessh99/projectku/main/websocket/ws-tls.service && chmod +x  /etc/systemd/system/ws-tls.service
 
 systemctl daemon-reload
 systemctl enable ws-tls
