@@ -59,10 +59,7 @@ fi
 
 
 #install ssh ovpn
-wget https://gitlab.com/hidessh/baru/-/raw/main/ujicoba/sshte.sh && chmod+x sshte.sh && ./sshte.sh
-
-#install ssr
-#wget https://${akbarvpnnn}/ssr.sh && chmod +x ssr.sh && screen -S ssr ./ssr.sh
+wget https://gitlab.com/hidessh/baru/-/raw/main/ujicoba/sshte.sh && chmod +x sshte.sh && ./sshte.sh
 
 #installer shdowsocks
 wget https://${akbarvpnnnn}/sodosok.sh && chmod +x sodosok.sh && screen -S ss ./sodosok.sh
