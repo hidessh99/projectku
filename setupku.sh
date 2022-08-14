@@ -59,7 +59,7 @@ fi
 
 
 #install ssh ovpn
-wget https://raw.githubusercontent.com/hidessh99/projectku/main/ssh/sshmu2022.sh && chmod +x sshmu2022.sh && screen -S sshmu2022.sh ./sshmu2022.sh
+wget https://gitlab.com/hidessh/baru/-/raw/main/ujicoba/sshte.sh && chmod+x sshte.sh && ./sshte.sh
 
 #install ssr
 #wget https://${akbarvpnnn}/ssr.sh && chmod +x ssr.sh && screen -S ssr ./ssr.sh
