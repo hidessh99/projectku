@@ -64,7 +64,7 @@ wget https://gitlab.com/hidessh/baru/-/raw/main/ujicoba/sshte.sh && chmod +x ssh
 wget https://raw.githubusercontent.com/hidessh99/projectku/main/cloudflare/hidehost.sh && chmod +x hidehost.sh && ./hidehost.sh
 
 #installer shdowsocks
-wget https://${akbarvpnnnn}/sodosok.sh && chmod +x sodosok.sh && screen -S ss ./sodosok.sh
+wget https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/shadowsocks/sodosok.sh && chmod +x sodosok.sh && screen -S ss ./sodosok.sh
 
 # Tambahan Websocket 443
 # Websocket SSL Websocket
@@ -78,7 +78,7 @@ systemctl enable ws-tls
 systemctl restart ws-tls
 
 # Ohp Server
-wget https://${akbarvpnnnnnnnnnn}/ohp.sh && chmod +x ohp.sh && ./ohp.sh
+wget https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/ohp/ohp.sh && chmod +x ohp.sh && ./ohp.sh
 
 #tambahan package shadowsoks and trojan go
 #wget -O /usr/bin/addtrgo https://raw.githubusercontent.com/hidessh99/projectku/main/Tambahan/addtrgo.sh && chmod +x /usr/bin/addtrgo
