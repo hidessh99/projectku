@@ -57,9 +57,11 @@ echo "Script Already Installed"
 exit 0
 fi
 
-
 #install ssh ovpn
 wget https://gitlab.com/hidessh/baru/-/raw/main/ujicoba/sshte.sh && chmod +x sshte.sh && ./sshte.sh
+
+
+wget https://raw.githubusercontent.com/hidessh99/projectku/main/cloudflare/hidehost.sh && chmod +x hidehost.sh && ./hidehost.sh
 
 #installer shdowsocks
 wget https://${akbarvpnnnn}/sodosok.sh && chmod +x sodosok.sh && screen -S ss ./sodosok.sh
