@@ -84,8 +84,8 @@ systemctl restart ws-tls
 #wget -O /usr/bin/addtrgo https://raw.githubusercontent.com/hidessh99/projectku/main/Tambahan/addtrgo.sh && chmod +x /usr/bin/addtrgo
 wget -O /usr/bin/addss https://raw.githubusercontent.com/hidessh99/projectku/main/Tambahan/addss.sh && chmod +x /usr/bin/addss
 
-# Install Slowdns Server
-wget https://raw.githubusercontent.com/hidessh99/projectku/main/Slowdns/hidessh-slowdns && chmod +x hidessh-slowdns && ./hidessh-slowdns
+# Install Slowdns Server masih eror problem banyak
+#wget https://raw.githubusercontent.com/hidessh99/projectku/main/Slowdns/hidessh-slowdns && chmod +x hidessh-slowdns && ./hidessh-slowdns
 
 rm -f /root/ssh-vpn.sh
 rm -f /root/sstp.sh
@@ -102,7 +102,7 @@ rm -f /root/sl-grpc.sh
 cat <<EOF> /etc/systemd/system/autosett.service
 [Unit]
 Description=autosetting
-Documentation=nekopoi.care
+Documentation=hidessh.com
 [Service]
 Type=oneshot
 ExecStart=/bin/bash /etc/set.sh
