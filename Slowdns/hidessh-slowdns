@@ -15,7 +15,7 @@ rm nsdomain
 #input nameserver
 read -rp "Masukkan Subdomain: " -e sub
 SUB_DOMAIN=${sub}.hidesvr.xyz
-NS_DOMAIN=slowdns-${SUB_DOMAIN}.hidesvr.xyz
+NS_DOMAIN=slowdns-${SUB_DOMAIN}
 echo $NS_DOMAIN > /root/nsdomain
 
 
