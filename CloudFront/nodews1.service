@@ -1,0 +1,16 @@
+[Unit]
+Description=hidessh
+Documentation=https://hidessh.com
+After=network.target nss-lookup.target
+
+[Service]
+User=nobody
+CapabilityBoundingSet=CAP_NET_ADMIN CAP_NET_BIND_SERVICE
+AmbientCapabilities=CAP_NET_ADMIN CAP_NET_BIND_SERVICE
+NoNewPrivileges=true
+ExecStart=node /etc/mrbogel/proxy3.js -dhost 127.0.0.1 -dport 50000 -mport 80
+Restart=on-failure
+RestartPreventExitStatus=1
+
+[Install]
+WantedBy=multi-user.target
