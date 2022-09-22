@@ -5,9 +5,9 @@
 
 
 #tambah dns
-sudo systemctl disable systemd-resolved.service && sudo systemctl stop systemd-resolved.service && sudo mv /etc/resolv.conf /etc/resolv.conf.bkp && echo "nameserver 1.1.1.1" > /etc/resolv.conf
-sudo systemctl enable systemd-resolved.service && sudo systemctl start systemd-resolved.service
-sleep 2
+#sudo systemctl disable systemd-resolved.service && sudo systemctl stop systemd-resolved.service && sudo mv /etc/resolv.conf /etc/resolv.conf.bkp && echo "nameserver 1.1.1.1" > /etc/resolv.conf
+#sudo systemctl enable systemd-resolved.service && sudo systemctl start systemd-resolved.service
+#sleep 2
 
 #setting IPtables
 iptables -I INPUT -p udp --dport 5300 -j ACCEPT
@@ -51,6 +51,7 @@ echo "Port 2222" >> /etc/ssh/sshd_config
 echo "Port 2269" >> /etc/ssh/sshd_config
 sed -i 's/#AllowTcpForwarding yes/AllowTcpForwarding yes/g' /etc/ssh/sshd_config
 service ssh restart
+service sshd restart
 
 #konfigurasi slowdns
 rm -rf /etc/slowdns
