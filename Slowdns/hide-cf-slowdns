@@ -15,7 +15,7 @@ subsl=$(</dev/urandom tr -dc a-x0-9 | head -c5)
 
 read -rp "Masukkan Subdomain: " -e sub
 SUB_DOMAIN=${sub}.hidesvr.xyz
-NS_DOMAIN=slowdns-${SUB_DOMAIN}.hidesvr.xyz
+NS_DOMAIN=slowdns-${SUB_DOMAIN}
 echo $NS_DOMAIN > /root/nsdomain
 CF_ID=admin@hidessh.com
 CF_KEY=e9c10a9d66f7c61b79c2a83fcc45669c32a17
