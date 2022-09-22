@@ -2,22 +2,27 @@
 # Script  By nstaller slowdns
 # 2022 SLOWDNS
 # ===============================================
+
+
+#tambah dns
+sudo systemctl disable systemd-resolved.service && sudo systemctl stop systemd-resolved.service && sudo mv /etc/resolv.conf /etc/resolv.conf.bkp && echo "nameserver 1.1.1.1" > /etc/resolv.conf
+sudo systemctl enable systemd-resolved.service && sudo systemctl start systemd-resolved.service
+sleep 2
+
+#setting IPtables
+iptables -I INPUT -p udp --dport 5300 -j ACCEPT
+iptables -t nat -I PREROUTING -p udp --dport 53 -j REDIRECT --to-ports 5300
+
 cd
-
-#wget https://raw.githubusercontent.com/fisabiliyusri/SLDNS/main/slowdns/slhostdns.sh && chmod +x slhostdns.sh && ./slhostdns.sh
-
-#wget https://raw.githubusercontent.com/hidessh99/projectku/main/Slowdns/hide-cf-slowdns && chmod +x hide-cf-slowdns && ./hide-cf-slowdns
-
 #delete directory
 rm -rf /root/nsdomain
 rm nsdomain
 
-#input nameserver
+#input nameserver manual to cloudflare
 read -rp "Masukkan Subdomain: " -e sub
 SUB_DOMAIN=${sub}.hidesvr.xyz
 NS_DOMAIN=slowdns-${SUB_DOMAIN}
 echo $NS_DOMAIN > /root/nsdomain
-
 
 nameserver=$(cat /root/nsdomain)
 apt update -y
@@ -42,7 +47,7 @@ service cron restart
 
 #tambahan port openssh
 cd
-echo "Port 3369" >> /etc/ssh/sshd_config
+echo "Port 2222" >> /etc/ssh/sshd_config
 echo "Port 2269" >> /etc/ssh/sshd_config
 sed -i 's/#AllowTcpForwarding yes/AllowTcpForwarding yes/g' /etc/ssh/sshd_config
 
@@ -58,9 +63,11 @@ chmod +x /etc/slowdns/server.key
 chmod +x /etc/slowdns/server.pub
 chmod +x /etc/slowdns/sldns-server
 chmod +x /etc/slowdns/sldns-client
+
 cd
 #wget -q -O /etc/systemd/system/client-sldns.service "https://raw.githubusercontent.com/fisabiliyusri/SLDNS/main/slowdns/client-sldns.service"
 #wget -q -O /etc/systemd/system/server-sldns.service "https://raw.githubusercontent.com/fisabiliyusri/SLDNS/main/slowdns/server-sldns.service"
+
 cd
 #install client-sldns.service
 cat > /etc/systemd/system/client-sldns.service << END
@@ -75,12 +82,13 @@ User=root
 CapabilityBoundingSet=CAP_NET_ADMIN CAP_NET_BIND_SERVICE
 AmbientCapabilities=CAP_NET_ADMIN CAP_NET_BIND_SERVICE
 NoNewPrivileges=true
-ExecStart=/etc/slowdns/sldns-client -udp 8.8.8.8:53 --pubkey-file /etc/slowdns/server.pub $nameserver 127.0.0.1:3369
+ExecStart=/etc/slowdns/sldns-client -udp 8.8.8.8:53 --pubkey-file /etc/slowdns/server.pub $nameserver 127.0.0.1:2222
 Restart=on-failure
 
 [Install]
 WantedBy=multi-user.target
 END
+
 cd
 #install server-sldns.service
 cat > /etc/systemd/system/server-sldns.service << END
@@ -101,17 +109,24 @@ Restart=on-failure
 [Install]
 WantedBy=multi-user.target
 END
+
+#permission service slowdns
 cd
 chmod +x /etc/systemd/system/client-sldns.service
+
 chmod +x /etc/systemd/system/server-sldns.service
 pkill sldns-server
 pkill sldns-client
+
 systemctl daemon-reload
 systemctl stop client-sldns
 systemctl stop server-sldns
+
 systemctl enable client-sldns
 systemctl enable server-sldns
+
 systemctl start client-sldns
 systemctl start server-sldns
+
 systemctl restart client-sldns
 systemctl restart server-sldns
