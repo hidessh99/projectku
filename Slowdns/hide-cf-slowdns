@@ -20,7 +20,6 @@ echo $NS_DOMAIN > /root/nsdomain
 CF_ID=admin@hidessh.com
 CF_KEY=e9c10a9d66f7c61b79c2a83fcc45669c32a17
 
-
 set -euo pipefail
 IP=$(wget -qO- icanhazip.com);
 ZONE=$(curl -sLX GET "https://api.cloudflare.com/client/v4/zones?name=${DOMAIN}&status=active" \
