@@ -155,7 +155,7 @@ wget https://raw.githubusercontent.com/hidessh99/projectku/main/SSL/hidesvr.key
 mkdir /etc/hidessh
 chmod +x /etc/hidessh
 
-cat ssh.key ssh.crt >> /etc/hidessh/stunnel.pem
+cat hidesvr.key hidesvr.crt >> /etc/hidessh/stunnel.pem
 
 #konfigurasi stunnel4
 cat > /etc/stunnel/stunnel.conf <<-END
