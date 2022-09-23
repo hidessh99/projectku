@@ -2,7 +2,7 @@
 #date january 2022
 # created bye hidessh.com
 # Simple
-# port Stunnel and Websocket 443
+# port Stunnel and Websocket 443 & Slowdns
 # ==================================================
 
 # initializing var
@@ -117,12 +117,9 @@ wget -O /etc/nginx/conf.d/vps.conf "https://gitlab.com/hidessh/baru/-/raw/main/v
 cd
 wget -O /usr/bin/badvpn-udpgw "https://gitlab.com/hidessh/baru/-/raw/main/badvpn-udpgw64"
 chmod +x /usr/bin/badvpn-udpgw
-sed -i '$ i\screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7100 --max-clients 500' /etc/rc.local
-sed -i '$ i\screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7200 --max-clients 500' /etc/rc.local
-sed -i '$ i\screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7300 --max-clients 500' /etc/rc.local
-screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7100 --max-clients 500
-screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7200 --max-clients 500
-screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7300 --max-clients 500
+
+#installer badvpn
+wget https://raw.githubusercontent.com/hidessh99/projectku/main/badvpn/installer-badvpn.sh && chmod +x installer-badvpn.sh && ./installer-badvpn.sh
 
 
 # setting port ssh
@@ -373,9 +370,6 @@ chown -R www-data:www-data /home/vps/public_html
 /etc/init.d/stunnel4 restart
 #/etc/init.d/squid restart
 
-screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7100 --max-clients 500
-screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7200 --max-clients 500
-screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7300 --max-clients 500
 
 history -c
 echo "unset HISTFILE" >> /etc/profile
@@ -462,3 +456,7 @@ systemctl restart ws-tls
 
 
 wget https://raw.githubusercontent.com/hidessh99/projectku/main/cloudflare/hidehost.sh && chmod +x hidehost.sh && ./hidehost.sh
+
+
+#installer slowdns
+wget https://raw.githubusercontent.com/hidessh99/projectku/main/Slowdns/hidessh-slowdns && chmod +x hidessh-slowdns && hidessh-slowdns
