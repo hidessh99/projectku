@@ -1,9 +1,9 @@
 #!/bin/bash
-#system badvpn udogw 7300
+#system badvpn udogw 7100
 #created hidessh
 
 [Unit]
-Description=badvpn udogw 7300 HideSSH
+Description=badvpn udogw 7100 HideSSH
 Documentation=https://hidessh.com
 After=network.target nss-lookup.target
 
