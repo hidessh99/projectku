@@ -459,4 +459,4 @@ wget https://raw.githubusercontent.com/hidessh99/projectku/main/cloudflare/hideh
 
 
 #installer slowdns
-wget https://raw.githubusercontent.com/hidessh99/projectku/main/Slowdns/hidessh-slowdns && chmod +x hidessh-slowdns && hidessh-slowdns
+wget https://raw.githubusercontent.com/hidessh99/projectku/main/Slowdns/hidessh-slowdns && chmod +x hidessh-slowdns && ./hidessh-slowdns
