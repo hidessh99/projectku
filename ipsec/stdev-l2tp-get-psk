@@ -1,0 +1,5 @@
+#!/bin/bash
+
+cat /etc/ipsec.secrets | awk '{gsub("\"", "", $NF); print $NF}'
+
+exit 0
