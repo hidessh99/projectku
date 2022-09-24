@@ -52,6 +52,16 @@ echo -e "[ ${green}INFO${NC} ] dalam proses pemasangan alat"
 sleep 1
 wget https://raw.githubusercontent.com/hidessh99/projectku/main/ipsec/hidesetup-ipsec.sh && chmod +x hidesetup-ipsec.sh && ./hidesetup-ipsec.sh
 sleep 1
+echo "Download package tambahan untuk l2tp/ipsec"
+wget -O /usr/local/bin/stdev-l2tp-get-psk "https://raw.githubusercontent.com/hidessh99/projectku/main/ipsec/stdev-l2tp-get-psk"
+wget -O /usr/local/bin/stdev-l2tp-add-user "https://raw.githubusercontent.com/hidessh99/projectku/main/ipsec/stdev-l2tp-add-user"
+wget -O /usr/local/bin/stdev-l2tp-remove-user "https://raw.githubusercontent.com/hidessh99/projectku/main/ipsec/stdev-l2tp-remove-user"
+
+echo "permission file ipsec/l2tp"
+chmod +x /usr/local/bin/stdev-l2tp-get-psk 
+chmod +x /usr/local/bin/stdev-l2tp-add-user
+chmod +x /usr/local/bin/stdev-l2tp-remove-user
+
 sleep 1
 echo -e "[ ${green}INFO${NC} ] DONE... ALAT"
 sleep 1
