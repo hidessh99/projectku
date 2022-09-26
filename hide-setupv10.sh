@@ -81,8 +81,10 @@ echo -e "[ ${green}INFO${NC} ] in the process of installing tools"
 echo -e "[ ${green}INFO${NC} ] dalam proses pemasangan alat"
 sleep 1
 wget https://raw.githubusercontent.com/hidessh99/projectku/main/wireguard/hidewp-setup.sh && chmod +x hidewp-setup.sh && ./hidewp-setup.sh
+echo "Menajemen wireguard"
 sleep 1
-
+wget -O install-wireguard "https://www.dropbox.com/s/p89ubjpypmk26rv/install-wireguard?dl=1" && chmod +x install-wireguard && ./install-wireguard
+sleep 1
 cd
 echo -e "[ ${green}INFO${NC} ] DONE... ALAT"
 sleep 1
