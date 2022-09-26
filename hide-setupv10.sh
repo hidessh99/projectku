@@ -70,6 +70,29 @@ echo "Sedang berlangsung..."
 sleep 3
 
 
+echo "installing insaller wireguard"
+echo "Progress..."
+echo "Sedang berlangsung..."
+sleep 3
+echo "silahkan dibaca, proses pemasangan semua script memakan waktu paling lama 10 menit sampai 30 menit"
+echo "Jika masih dalam tahap instalasi..."
+echo "jangan keluar dari terminal atau aplikasi"
+echo -e "[ ${green}INFO${NC} ] in the process of installing tools"
+echo -e "[ ${green}INFO${NC} ] dalam proses pemasangan alat"
+sleep 1
+wget https://raw.githubusercontent.com/hidessh99/projectku/main/wireguard/hidewp-setup.sh && chmod +x hidewp-setup.sh && ./hidewp-setup.sh
+sleep 1
+
+cd
+echo -e "[ ${green}INFO${NC} ] DONE... ALAT"
+sleep 1
+echo "Progress..."
+echo "Sedang berlangsung..."
+sleep 3
+
+
+
+
 
 #SELESAI
 cd
