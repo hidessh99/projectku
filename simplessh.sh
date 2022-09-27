@@ -404,13 +404,9 @@ wget https://gitlab.com/hidessh/baru/-/raw/main/ohp.sh && chmod +x ohp.sh && ./o
 #installer host
 wget https://raw.githubusercontent.com/hidessh99/projectku/main/cloudflare/hidehost.sh && chmod +x hidehost.sh && ./hidehost.sh
 
-#installer slowdns
-wget https://raw.githubusercontent.com/hidessh99/projectku/main/Slowdns/hidessh-slowdns && chmod +x hidessh-slowdns && ./hidessh-slowdns
-
 
 #remove file 
 cd
 rm -rf hideinstall-websocket.sh
 rm -rf hidehost.sh
-rm -rf hidessh-slowdns
 rm -rf ohp.sh
