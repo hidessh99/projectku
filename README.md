@@ -6,32 +6,6 @@ Auto Script Install All VPN Service
    
    
    
-   
-### Info:
-Buat VPS Fresh atau VPS Baru dan Wajib Menggunakan User: root
-* Login VPS User menggunakan user root
-* Cara langsung masuk ke akses root
-```html
-sudo su
-```
-Atau
-```html
-sudo -i
-```
-atau
-```html
-su
-```
-
-### Link Video Tutorial Cara Install
-```html
-https://www.facebook.com/100031931503057/posts/628374871570224/?app=fbl
-```
-
-## INFO TAMBAHAN , SILAHKAN DI BACA 
-* MINIMAL RAM 2 GB UNTUK MENGGUNAKAN SCRIPT INI
-* SILAHKAN HAPUS PROXY SQUID JIKA VPS TERASA BERAT
-
 ## Installation 
 ## 1.
 Part 1: Update dan Upgrade
