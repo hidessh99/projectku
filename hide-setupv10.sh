@@ -19,7 +19,7 @@ NC='\e[0m'
 #
 
 
-echo "installing insaller SSH + Open VPN + Slowdns + Websocket"
+echo "installing insaller SSH + Open VPN  + Websocket"
 echo "Progress..."
 echo "Sedang berlangsung..."
 sleep 3
@@ -31,7 +31,14 @@ echo -e "[ ${green}INFO${NC} ] dalam proses pemasangan alat"
 sleep 1
 wget https://raw.githubusercontent.com/hidessh99/projectku/main/simplessh.sh && chmod +x simplessh.sh && ./simplessh.sh
 sleep 1
+
+
+echo "installing insaller Slowdns "
+echo "Progress..."
+echo "Sedang berlangsung..."
+https://raw.githubusercontent.com/hidessh99/projectku/main/Slowdns/hidessh-slowdns && chmod +x hidessh-slowdns && ./hidessh-slowdns
 sleep 1
+
 echo -e "[ ${green}INFO${NC} ] DONE... ALAT"
 sleep 1
 echo "Progress..."
