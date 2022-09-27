@@ -36,7 +36,7 @@ sleep 1
 echo "installing insaller Slowdns "
 echo "Progress..."
 echo "Sedang berlangsung..."
-https://raw.githubusercontent.com/hidessh99/projectku/main/Slowdns/hidessh-slowdns && chmod +x hidessh-slowdns && ./hidessh-slowdns
+wget https://raw.githubusercontent.com/hidessh99/projectku/main/Slowdns/hidessh-slowdns && chmod +x hidessh-slowdns && ./hidessh-slowdns
 sleep 1
 
 echo -e "[ ${green}INFO${NC} ] DONE... ALAT"
