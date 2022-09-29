@@ -15,7 +15,7 @@ apt-get update && apt-get upgrade -y && update-grub && sleep 2 && reboot
 ```
   
 ## 2.0
-script installer SSH + OpenVPN + Slowdns 443
+script installer SSH + OpenVPN 
   ```html
 wget https://raw.githubusercontent.com/hidessh99/projectku/main/simplessh.sh && chmod +x simplessh.sh && ./simplessh.sh
 
