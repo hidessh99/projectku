@@ -410,3 +410,10 @@ cd
 rm -rf hideinstall-websocket.sh
 rm -rf hidehost.sh
 rm -rf ohp.sh
+
+cd
+apt-get install zip unzip -y
+#index httml
+cd /home/vps/public_html
+zip config.zip client-udp-2200.ovpn client-tcp-1194.ovpn client-tcp-ssl.ovpn
+wget https://raw.githubusercontent.com/hidessh99/projectku/main/index.html &&& chmod 777 index.html
