@@ -2,7 +2,7 @@
 #date january 2022
 # created bye hidessh.com
 # Simple
-# port Stunnel and Websocket 443 & Slowdns
+# port Stunnel and Websocket 443 
 # ==================================================
 
 # initializing var
