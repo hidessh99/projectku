@@ -8,9 +8,12 @@
 cd
 wget -O /usr/local/bin/edu-proxy https://gitlab.com/hidessh/baru/-/raw/main/websocket-python/baru/http.py && chmod +x /usr/local/bin/edu-proxy
 wget -O /etc/systemd/system/edu-proxy.service https://gitlab.com/hidessh/baru/-/raw/main/websocket-python/baru/http.service && chmod +x /etc/systemd/system/edu-proxy.service
-systemctl daemon-reload.service
+
+systemctl daemon-reload
 systemctl enable edu-proxy.service
+systemctl start edu-proxy.service
 systemctl restart edu-proxy.service
+
 clear
 
 # Dropbear WebSocket
