@@ -146,13 +146,16 @@ apt install stunnel4 -y
 #installer SSL Cloudflare 
 cd
 
-wget https://raw.githubusercontent.com/hidessh99/projectku/main/SSL/hidesvr.crt
-wget https://raw.githubusercontent.com/hidessh99/projectku/main/SSL/hidesvr.key
+wget https://raw.githubusercontent.com/hidessh99/projectku/main/SSL/hides.crt
+wget https://raw.githubusercontent.com/hidessh99/projectku/main/SSL/hide.key
 #buat directory
 mkdir /etc/hidessh
 chmod +x /etc/hidessh
 
-cat hidesvr.key hidesvr.crt >> /etc/hidessh/stunnel.pem
+cat hide.key hide.crt >> /etc/hidessh/stunnel.pem
+
+cd
+chmod +x /etc/hidessh/stunnel.pem
 
 #konfigurasi stunnel4
 cat > /etc/stunnel/stunnel.conf <<-END
