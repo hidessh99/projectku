@@ -146,7 +146,7 @@ apt install stunnel4 -y
 #installer SSL Cloudflare 
 cd
 
-wget https://raw.githubusercontent.com/hidessh99/projectku/main/SSL/hides.crt
+wget https://raw.githubusercontent.com/hidessh99/projectku/main/SSL/hide.crt
 wget https://raw.githubusercontent.com/hidessh99/projectku/main/SSL/hide.key
 #buat directory
 mkdir /etc/hidessh
