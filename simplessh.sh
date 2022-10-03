@@ -294,23 +294,7 @@ wget -O renew "https://gitlab.com/hidessh/baru/-/raw/main/renew.sh"
 wget -O autokill "https://gitlab.com/hidessh/baru/-/raw/main/autokill.sh"
 wget -O ceklim "https://gitlab.com/hidessh/baru/-/raw/main/ceklim.sh"
 wget -O tendang "https://gitlab.com/hidessh/baru/-/raw/main/tendang.sh"
-wget -O clear-log "https://gitlab.com/hidessh/baru/-/raw/main/clear-log.sh"
-wget -O change-port "https://gitlab.com/hidessh/baru/-/raw/main/change.sh"
-wget -O port-ovpn "https://gitlab.com/hidessh/baru/-/raw/main/port-ovpn.sh"
-wget -O port-ssl "https://gitlab.com/hidessh/baru/-/raw/main/port-ssl.sh"
-wget -O port-wg "https://gitlab.com/hidessh/baru/-/raw/main/port-wg.sh"
-wget -O port-tr "https://gitlab.com/hidessh/baru/-/raw/main/port-tr.sh"
-wget -O port-sstp "https://gitlab.com/hidessh/baru/-/raw/main/port-sstp.sh"
-wget -O port-squid "https://gitlab.com/hidessh/baru/-/raw/main/port-squid.sh"
-wget -O port-ws "https://gitlab.com/hidessh/baru/-/raw/main/port-ws.sh"
-wget -O port-vless "https://gitlab.com/hidessh/baru/-/raw/main/port-vless.sh"
-wget -O wbmn "https://gitlab.com/hidessh/baru/-/raw/main/webmin.sh"
-wget -O xp "https://gitlab.com/hidessh/baru/-/raw/main/xp.sh"
-wget -O update "https://gitlab.com/hidessh/baru/-/raw/main/update.sh"
-wget -O user-limit "https://gitlab.com/hidessh/baru/-/raw/main/user-limit.sh"
-wget -O cfd "https://gitlab.com/hidessh/baru/-/raw/main/cfd.sh"
-wget -O cff "https://gitlab.com/hidessh/baru/-/raw/main/cff.sh"
-wget -O cfh "https://gitlab.com/hidessh/baru/-/raw/main/cfh.sh"
+
 #tambahan baru
 wget -O userdelexpired "https://gitlab.com/hidessh/baru/-/raw/main/userdelexpired.sh"
 wget -O autoreboot "https://gitlab.com/hidessh/baru/-/raw/main/autoreboot.sh"
@@ -396,8 +380,66 @@ apt autoremove -y
 
 
 
+#instalasi Websocket#!/bin/bash
+#date january 2022
+# created bye hidessh.com
 #instalasi Websocket
-wget https://raw.githubusercontent.com/hidessh99/projectku/main/websocket/hideinstall-websocket.sh && chmod +x hideinstall-websocket.sh && ./hideinstall-websocket.sh
+
+# Websocket OpenSSH
+#port 88 (OpenSSH) to 2082 (HTTP Websocket)
+cd
+wget -O /usr/local/bin/edu-proxy https://gitlab.com/hidessh/baru/-/raw/main/websocket-python/baru/http.py && chmod +x /usr/local/bin/edu-proxy
+wget -O /etc/systemd/system/edu-proxy.service https://gitlab.com/hidessh/baru/-/raw/main/websocket-python/baru/http.service && chmod +x /etc/systemd/system/edu-proxy.service
+
+systemctl daemon-reload
+systemctl enable edu-proxy.service
+systemctl start edu-proxy.service
+systemctl restart edu-proxy.service
+
+clear
+
+# Dropbear WebSocket
+#port 69 ( Dropbear) to 8880 (HTTPS Websocket)
+cd
+wget -O /usr/local/bin/ws-dropbear https://gitlab.com/hidessh/baru/-/raw/main/websocket-python/baru/https.py && chmod +x /usr/local/bin/ws-dropbear
+wget -O /etc/systemd/system/ws-dropbear.service https://gitlab.com/hidessh/baru/-/raw/main/websocket-python/baru/https.service && chmod +x /etc/systemd/system/ws-dropbear.service
+#reboot service
+systemctl daemon-reload
+systemctl enable ws-dropbear.service
+systemctl start ws-dropbear.service
+systemctl restart ws-dropbear.service
+clear
+
+# OpenVPN WebSocket
+#port 1194 ( Dropbear) to 2086 (HTTP Websocket)
+wget -O /usr/local/bin/edu-proxyovpn https://gitlab.com/hidessh/baru/-/raw/main/websocket-python/baru/ovpn.py && chmod +x /usr/local/bin/edu-proxyovpn
+wget -O /etc/systemd/system/edu-proxyovpn.service https://gitlab.com/hidessh/baru/-/raw/main/websocket-python/baru/ovpn.service && chmod +x /etc/systemd/system/edu-proxyovpn.service
+#reboot service
+systemctl daemon-reload
+systemctl enable edu-proxyovpn.service
+systemctl start edu-proxyovpn.service
+systemctl restart edu-proxyovpn.service
+clear
+
+
+# SSL/TLS WebSocket
+#port 1194 ( Dropbear) to 2086 (HTTP Websocket)
+wget -O /usr/local/bin/edu-tls https://gitlab.com/hidessh/baru/-/raw/main/websocket-python/ws-tls.py && chmod +x /usr/local/bin/edu-tls
+wget -O /etc/systemd/system/edu-tls.service https://gitlab.com/hidessh/baru/-/raw/main/websocket-python/ws-tls.service && chmod +x /etc/systemd/system/edu-tls.service
+#reboot service
+systemctl daemon-reload
+systemctl enable edu-tls
+systemctl start edu-tls
+systemctl restart edu-tls
+clear
+
+cd
+wget -O /usr/local/bin/ws-tls https://raw.githubusercontent.com/hidessh99/projectku/main/websocket/ws-tls && chmod +x /usr/local/bin/ws-tls
+wget -O /etc/systemd/system/ws-tls.service https://raw.githubusercontent.com/hidessh99/projectku/main/websocket/ws-tls.service && chmod +x  /etc/systemd/system/ws-tls.service
+
+systemctl daemon-reload
+systemctl enable ws-tls
+systemctl restart ws-tls
 
 # finihsing
 clear
