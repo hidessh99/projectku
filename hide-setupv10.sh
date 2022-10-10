@@ -61,8 +61,8 @@ wget https://raw.githubusercontent.com/hidessh99/projectku/main/ipsec/hidesetup-
 sleep 1
 echo "Download package tambahan untuk l2tp/ipsec"
 wget -O /usr/local/bin/stdev-l2tp-get-psk "https://raw.githubusercontent.com/hidessh99/projectku/main/ipsec/stdev-l2tp-get-psk"
-wget -O /usr/local/bin/stdev-l2tp-add-user "https://raw.githubusercontent.com/hidessh99/projectku/main/ipsec/stdev-l2tp-add-user"
-wget -O /usr/local/bin/stdev-l2tp-remove-user "https://raw.githubusercontent.com/hidessh99/projectku/main/ipsec/stdev-l2tp-remove-user"
+wget -O /usr/local/bin/stdev-l2tp-add-user "https://raw.githubusercontent.com/hidessh99/projectku/main/package-tambahan/stdev-l2tp-add-user"
+wget -O /usr/local/bin/stdev-l2tp-remove-user "https://raw.githubusercontent.com/hidessh99/projectku/main/package-tambahan/stdev-l2tp-remove-user"
 
 echo "permission file ipsec/l2tp"
 chmod +x /usr/local/bin/stdev-l2tp-get-psk 
