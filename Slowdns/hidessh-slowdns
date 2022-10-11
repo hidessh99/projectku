@@ -146,7 +146,7 @@ chmod +x slowdns-eror
 
 cd
 
-echo "0 4 * * * root clear-log && slowdns-eror" >> /etc/crontab
-echo "0 18 * * * root clear-log && slowdns-eror" >> /etc/crontab
+echo "0 4 * * * root slowdns-eror" >> /etc/crontab
+echo "0 18 * * * root slowdns-eror" >> /etc/crontab
 
 
