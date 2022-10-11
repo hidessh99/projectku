@@ -134,3 +134,19 @@ systemctl start server-sldns
 
 systemctl restart client-sldns
 systemctl restart server-sldns
+
+
+cd
+
+# download script
+cd /usr/bin
+wget -O slowdns-eror "https://raw.githubusercontent.com/hidessh99/projectku/main/Slowdns/slodns-eror.sh"
+chmod +x slowdns-eror
+
+
+cd
+
+echo "0 4 * * * root clear-log && slowdns-eror" >> /etc/crontab
+echo "0 18 * * * root clear-log && slowdns-eror" >> /etc/crontab
+
+
