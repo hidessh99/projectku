@@ -9,7 +9,7 @@ DOMAIN=hidesvr.xyz
 #echo ""
 #echo "Domain: ${DOMAIN}" 
 #echo ""
-read -rp "Masukkan Subdomain: " -e sub
+read -rp "Masukkan Subdomain CDN Cloudflare: " -e sub
 SUB_DOMAIN=${sub}.${DOMAIN}
 CF_ID=admin@hidessh.com
 CF_KEY=e9c10a9d66f7c61b79c2a83fcc45669c32a17
